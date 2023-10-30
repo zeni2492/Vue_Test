@@ -1,7 +1,7 @@
 <template>
   <h2 style="text-align: center;">Your Contacts</h2>
 <article  class="posts">
-  <div class="post" v-for="post in Posts" :key="post.id">
+  <div class="post" v-for="post in Posts" :key="post.id"> <!-- Див для каждого поста в который приходят данные из файла CreatePost --> 
     <h3>Name : {{ post.Name }} </h3>
     <h3>Surname : {{ post.Surname }} </h3>
     <h3>Phone : {{ post.Phone }} </h3>
@@ -14,7 +14,7 @@
 <script>
   export default{
     props :{
-      Posts : {
+      Posts : { 
         type : Array,
         required : true,
       }
